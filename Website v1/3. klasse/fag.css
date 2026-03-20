@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --beige: #f7f4d5;
+    --dark-green: #0a3323;
+    --moss-green: #839958;
+    --rosy-brown: #d3968c;
+    --midnight-green: #105666;
+    --caput-mortuum: #632024;
+    --font-big: 'Lexend Deca', sans-serif;
+    --font-small: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: var(--font-small);
+    background-color: var(--beige);
+    color: var(--midnight-green);
+}
+
+body {
+    padding: 1em;
+    background-color: var(--beige);
+}
+
+.main-title {
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-big);
+    color: var(--rosy-brown);
+    margin-bottom: 0.5em;
+}
+
+nav {
+    margin: 1em auto 3em auto;
+    width: min(1000px, 100%);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-family: var(--font-big);
+    font-weight: bold;
+    color: var(--rosy-brown);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--rosy-brown);
+    font-family: var(--font-big);
+}
+
+nav a:hover {
+    color: var(--caput-mortuum);
+}
+
+header, section {
+    margin: 2em auto;
+    width: min(75em, 100%);
+    background-color: var(--midnight-green);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+}
+
+
+section {
+    padding: 3em min(2em, 15%);
+    background-color: var(--rosy-brown);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+#filer {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#filer a {
+    text-decoration: none;
+    padding: 1em 1.5em;
+    border-radius: 0.8em;
+    font-family: var(--font-big);
+    color: var(--caput-mortuum);
+    display: inline-block;
+    background-color: var(--moss-green);
+}

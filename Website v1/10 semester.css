@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --beige: #f7f4d5;
+    --dark-green: #0a3323;
+    --moss-green: #839958;
+    --rosy-brown: #d3968c;
+    --midnight-green: #105666;
+    --caput-mortuum: #632024;
+    --font-big: 'Lexend Deca', sans-serif;
+    --font-small: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: var(--font-small);
+    background-color: var(--beige);
+    color: var(--midnight-green);
+}
+
+body {
+    padding: 1em;
+    background-color: var(--beige);
+}
+
+.main-title {
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-big);
+    color: var(--rosy-brown);
+    margin-bottom: 0.5em;
+}
+
+nav {
+    margin: 1em auto 3em auto;
+    width: min(1000px, 100%);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-family: var(--font-big);
+    font-weight: bold;
+    color: var(--rosy-brown);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--rosy-brown);
+    font-family: var(--font-big);
+}
+
+nav a:hover {
+    color: var(--caput-mortuum);
+}
+
+header, section {
+    margin: 2em auto;
+    width: min(75em, 100%);
+    background-color: var(--midnight-green);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+}
+
+
+section {
+    padding: 3em min(2em, 15%);
+    background-color: var(--rosy-brown);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+section p {
+    margin-top: 1em;
+    font-size: 1.25rem;
+}
+
+section#navigation {
+    background-color: var(--rosy-brown);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    width: 100%;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "img-1 img-2";    
+    gap: 1em;
+}
+
+.grid-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: .5em;
+    transition: 100ms ease,;
+}
+
+.grid-container img:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none; /* removes underline */
+    color: var(--rosy-brown);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card p {
+    margin-top: 0.5em;
+    text-align: center;
+    font-weight: 500;
+}
+
+.card {
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+

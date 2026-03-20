@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sigridhc</title>
+    <link rel="stylesheet" href="01 style.css">
+    <script src="https://kit.fontawesome.com/d2f2294c8d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <header>
+        <h1 class="main-title">Sigrid H. Christensen</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.instagram.com/sigridhchr">instagram</a></li>
+                <li><a href="#om meg">om meg</a></li>
+            </ul>
+        </nav>
+        <div class="flex-container">
+            <div class="container">
+                <div class="music-player">
+                    <!--
+                    <nav id="musikk">
+                        <div class="circle">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </div>
+                        <div class="circle">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                    </nav>
+                    -->
+                    <img src="Music_player/dj ziggy.jpeg" class="song_img">
+                    <h2>Like We Used To</h2>
+                    <p>The Silhouettes Project</p>
+
+                    <audio id="song">
+                        <source src="Music_player/The Silhouettes Project - Like We Used To.mp3" type="audio/mpeg">
+                    </audio>
+                    <input type="range" value="0" id="progress">
+                    <div class="controls">
+                        <div><i class="fa-solid fa-backward"></i></div>
+                        <div onclick="playPause()"><i class="fa-solid fa-play" id="cmdIcon"></i></div>
+                        <div><i class="fa-solid fa-forward"></i></div>
+                    </div>
+                </div>
+                <script>
+                    let progress = document.getElementById('progress');
+                    let song = document.getElementById("song");
+                    let cmdIcon = document.getElementById("cmdIcon");
+
+                    song.onloadedmetadata = function() {
+                        progress.max = song.duration;
+                        progress.value = song.currentTime;
+                    }
+
+                    function playPause() {
+                        if (cmdIcon.classList.contains("fa-pause")){
+                            song.pause();
+                            cmdIcon.classList.remove("fa-pause");
+                            cmdIcon.classList.add("fa-play");
+                        }
+                        else {
+                            song.play();
+                            cmdIcon.classList.remove("fa-play");
+                            cmdIcon.classList.add("fa-pause");
+                        }
+                    }
+
+                    if (song.play()) {0
+                        setInterval(() => {
+                            progress.value = song.currentTime;
+                        }, 500);
+                    }
+
+                    progress.onchange = function() {
+                        song.play();
+                        song.currentTime = progress.value;
+                        cmdIcon.classList.remove("fa-play");
+                        cmdIcon.classList.add("fa-pause");
+                    }
+
+                </script>
+            </div>
+            <div class="text-container">
+                <h1>Velkommen til min folk-side<3</h1>
+                <p>Jeg har lært meg å kode denne nettsiden med HTML og CSS over en helg med youtube, og anbefaler absolutt alle andre å gjøre det også!</p>
+                <p>På denne siden har jeg samlet diverse innleveringer og øvinger jeg har hatt på MTKJ, samt annet gøy jeg vil at flere skal ha glede av!</p>
+                <p>Sjekk ut hvilken sang jeg har på repeat om dagen i spilleren til venstre!</p>
+                <a href="https://www.aftenposten.no/" class="cta-button">Klikk for nyheter</a> <a href="https://www.yr.no/nb/v%C3%A6rvarsel/daglig-tabell/2-12547477/%C3%98sterrike/Wien/Vienna/Fillgradergasse%2012" class="cta-button">Klikk for været</a>
+            </div>
+
+        </div>
+    </header>
+
+ <section id="navigation">
+    <h3>hva vil du gjøre?</h3>
+    <div class="grid-container">
+        
+        <a href="02 hovedside_kok.html" class="card" style="grid-area: img-1">
+            <img src="images/cøggie.jpeg">
+            <p>kok</p>
+        </a>
+
+        <a href="bok-anbefalinger!/00 ikke noe å se her.html" class="card" style="grid-area: img-2">
+            <img src="images/paylin.jpeg">
+            <p>Paylin</p>
+        </a>
+
+        <a href="spill og sånt/00 ikke noe å se her.html" class="card" style="grid-area: img-3">
+            <img src="images/sigrun.jpg">
+            <p>Sigrun</p>
+        </a>
+
+        <a href="arkiv/00 ikke noe å se her.html" class="card" style="grid-area: img-4">
+            <img src="images/sigurd.jpeg">
+            <p>Sigurd</p>
+        </a>
+
+    </div>
+</section>
+
+    <section id="om meg">
+        <div class="flex-container">
+            <div class="text-container">
+                <h2>Om meg</h2>
+                <p>Jeg går 4. klasse organisk kjemi, og er for tiden på utveksling i Wien!</p>
+                <p>Ved siden av studine i Trondheim har jeg vært aktiv i Klubbstyret på Samfundet, og drevet med litt småting i HC, blandt annet: Chemikal-bandet i 2023, som PTV, og i Promo! Når jeg gjør mitt comeback i Tornheim til høsten vil jeg også være en del av Pyro og Ressurs<3</p>
+                <p>xoxo</p>
+            </div>
+            <img id="img-om-meg" src="images/party-ziggy.jpeg" alt="ziggy på ski">
+        </div>
+    </section>
+</body>
+</html> 
